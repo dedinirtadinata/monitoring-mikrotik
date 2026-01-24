@@ -1,0 +1,16 @@
+apiVersion: 1
+
+datasources:
+  - name: influxdb
+    type: influxdb
+    access: proxy
+    url: http://influxdb:8086
+    isDefault: true
+    database: mikrotik
+    user: telegraf
+    secureJsonData:
+      password: telegraf123
+    jsonData:
+      httpMode: GET
+      version: InfluxQL
+    editable: false
